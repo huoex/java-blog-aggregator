@@ -3,7 +3,7 @@
 
 <%@ include file="../layout/taglib.jsp" %>
 
-<form:form commandName="user" cssClass="form-horizontal registrationForm">
+<form:form commandName="mser" cssClass="form-horizontal registrationForm">
 
 	<c:if test="${param.success eq true}">
 		<div class="alert alert-success">Registration successfull!</div>

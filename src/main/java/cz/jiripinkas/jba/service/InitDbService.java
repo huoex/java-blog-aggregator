@@ -8,6 +8,7 @@ import javax.annotation.PostConstruct;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -36,6 +37,9 @@ public class InitDbService {
 	@Autowired
 	private ItemRepository itemRepository;
 
+	@Autowired
+	private ApplicationContext applicationContext;
+	
 	@PostConstruct
 	public void init() {
 		if (roleRepository.findByName("ROLE_ADMIN") == null) {
@@ -58,12 +62,12 @@ public class InitDbService {
 			userAdmin.setRoles(roles);
 			userRepository.save(userAdmin);
 
-			Blog blogJavavids = new Blog();
-			blogJavavids.setName("JavaVids");
-			blogJavavids
-					.setUrl("http://feeds.feedburner.com/javavids?format=xml");
-			blogJavavids.setUser(userAdmin);
-			blogRepository.save(blogJavavids);
+//			Blog blogJavavids = new Blog();
+//			blogJavavids.setName("JavaVids");
+//			blogJavavids
+//					.setUrl("http://feeds.feedburner.com/javavids?format=xml");
+//			blogJavavids.setUser(userAdmin);
+//			blogRepository.save(blogJavavids);
 
 			// Item item1 = new Item();
 			// item1.setBlog(blogJavavids);

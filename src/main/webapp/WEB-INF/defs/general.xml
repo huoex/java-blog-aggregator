@@ -10,7 +10,7 @@
 	<definition name="index" extends="common">
 		<put-attribute name="title" value="Java Blog Aggregator" />
 		<put-attribute name="body" value="/WEB-INF/jsp/index.jsp" />
-		<put-attribute name="current" value="index" />
+		<put-attribute name="current" value="index1" />
 	</definition>
 
 	<definition name="users" extends="common">
@@ -37,7 +37,7 @@
 		<put-attribute name="current" value="register" />
 	</definition>
 
-	<definition name="login" extends="common">
+	<definition name="login2" extends="common">
 		<put-attribute name="title" value="Login" />
 		<put-attribute name="body" value="/WEB-INF/jsp/login.jsp" />
 		<put-attribute name="current" value="login" />

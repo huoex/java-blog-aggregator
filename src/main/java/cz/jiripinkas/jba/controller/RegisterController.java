@@ -21,7 +21,7 @@ public class RegisterController {
 	@Autowired
 	private UserService userService;
 
-	@ModelAttribute("user")
+	@ModelAttribute("mser")
 	public User constructUser() {
 		return new User();
 	}
@@ -32,7 +32,7 @@ public class RegisterController {
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
-	public String doRegister(@Valid @ModelAttribute("user") User user, BindingResult result) {
+	public String coRegister(@Valid @ModelAttribute("mser") User user, BindingResult result) {
 		if (result.hasErrors()) {
 			return "user-register";
 		}

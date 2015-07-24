@@ -15,7 +15,7 @@
 <link rel="stylesheet"
 	href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="/lib/jquery-2.1.4.min.js"></script>
 
 <script type="text/javascript" 
 		src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
@@ -54,7 +54,7 @@
               </security:authorize>
               <li class="${current == 'register' ? 'active' : ''}"><a href="<spring:url value="/register.html" />">Register</a></li>
               <security:authorize access="! isAuthenticated()">
-	              <li class="${current == 'login' ? 'active' : ''}"><a href="<spring:url value="/login.html" />">Login</a></li>
+	              <li class="${current == 'login' ? 'active' : ''}"><a href="<spring:url value="/login1.html" />">Login</a></li>
               </security:authorize>
               <security:authorize access="isAuthenticated()">
               	<li class="${current == 'account' ? 'active' : ''}"><a href="<spring:url value="/account.html" />">My account</a></li>

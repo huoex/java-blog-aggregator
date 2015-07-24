@@ -17,6 +17,6 @@ public class ItemService {
 	private ItemRepository itemRepository;
 
 	public List<Item> getItems() {
-		return itemRepository.findAll(new PageRequest(0, 20, Direction.DESC, "publishedDate")).getContent();
+		return itemRepository.findAll(new PageRequest(0, 5, Direction.DESC, "publishedDate")).getContent();
 	}
 }
